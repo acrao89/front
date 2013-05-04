@@ -1,0 +1,12 @@
+www:
+  type: python
+  config:
+    python_version: v2.7
+  environment:
+    DJANGO_SETTINGS_MODULE: mywebsite.settings_dotcloud
+    LANG: en_US.UTF-8
+    LC_ALL: en_US.UTF-8
+db:
+  type: postgresql
+# cache:
+#    type: redis

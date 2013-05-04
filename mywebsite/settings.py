@@ -170,13 +170,13 @@ STATICFILES_FINDERS = (
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         # DB name or path to database file if using sqlite3.
-        "NAME": "",
+        "NAME": "test",
         # Not used with sqlite3.
-        "USER": "",
+        "USER": "admin",
         # Not used with sqlite3.
-        "PASSWORD": "",
+        "PASSWORD": "root",
         # Set to empty string for localhost. Not used with sqlite3.
         "HOST": "",
         # Set to empty string for default. Not used with sqlite3.
@@ -258,7 +258,8 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    #"mezzanine.accounts",
+    "landing",
+    "mezzanine.accounts",
     #"mezzanine.mobile",
 )
 
@@ -372,3 +373,5 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+PAGES_MENU_SHOW_ALL = False

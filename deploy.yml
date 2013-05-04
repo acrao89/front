@@ -1,0 +1,10 @@
+admin_password: pass
+database: PostgreSQL
+django_settings: mywebsite.settings
+managepy: mywebsite/manage.py
+media_url: /media/
+project_name: mywebsite
+provider: dotcloud
+pyversion: Python2.7
+requirements: mywebsite/requirements.txt
+static_url: /static/
