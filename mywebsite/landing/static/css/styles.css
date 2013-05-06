@@ -1,0 +1,21 @@
+.main_content {
+	width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 34px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#form {
+
+float: right;
+
+}
+
+.message {
+	float:right;
+	
+}

@@ -1,3 +1,4 @@
+import os
 
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
@@ -44,8 +45,17 @@ urlpatterns = patterns("",
     # we can't have a template called "/.html" - so for this case, the
     # template "pages/index.html" can be used.
 
-    url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    #url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
 
+
+    ########## for Landing page ###############
+    url('^$', 'landing.views.collectemail'),
+
+    #### landing page html shit #####
+
+    (r'^media(?P<path>.*)$', 'django.views.static.serve', {'document_root': os.path.join(os.path.dirname(__file__), 'static/media')}),
+    (r'^static(?P<path>.*)$', 'django.views.static.serve', {'document_root': os.path.join(os.path.dirname(__file__), 'static')}),
+    
     # HOMEPAGE FOR A BLOG-ONLY SITE
     # -----------------------------
     # This pattern points the homepage to the blog post listing page,
